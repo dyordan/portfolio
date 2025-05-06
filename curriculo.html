@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Breno Dyordan</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Configurações Gerais */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F4F4F4; /* Cinza claro */
+      color: #121212; /* Preto elegante */
+      margin: 0;
+      padding: 0;
+    }
+
+    .ficha {
+      background-color: #FFFFFF; /* Branco */
+      color: #121212; /* Preto elegante */
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(18, 18, 18, 0.1); /* Preto elegante com opacidade */
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      color: #1A374D; /* Cor padrão para o h1 */
+    }
+
+    /* Estilo para o texto "Breno Dyordan" */
+    #name {
+      color: #ffffff; /* Dourado suave */
+    }
+
+    .dados-pessoais p:first-of-type {
+      margin-bottom: 1rem; /* Espaço extra abaixo do aviso de links interativos */
+    }
+
+    .dados-pessoais a {
+      color: #1A374D; /* Azul petróleo */
+      text-decoration: none;
+    }
+
+    .dados-pessoais a:hover {
+      color: #CDA434; /* Dourado suave */
+      text-decoration: underline; /* Destaca o link ao passar o mouse */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="navbar">
+    <h1 id="title">
+      <span id="name">Breno Dyordan</span>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="curriculo">
+      <!-- Ficha: Dados Pessoais -->
+      <div class="dados-pessoais ficha">
+        <h3>Dados Pessoais</h3>
+        <p><em>Links interativos: basta clicar para acessar diretamente as informações.</em></p>
+        <p><i class="fas fa-phone icone-telefone"></i> <strong>Telefone:</strong> <a href="https://wa.me/5518997708794">(18) 9 9770 - 8794</a></p>
+        <p><i class="fas fa-envelope icone-email"></i> <strong>Email:</strong> <a href="mailto:brenodyordan@gmail.com">brenodyordan@gmail.com</a></p>
+        <p><i class="fas fa-map-marker-alt icone-localizacao"></i> <strong>Localização:</strong> Assis - São Paulo</p>
+        <p><i class="fab fa-linkedin icone-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/breno-dyordan-a872471a5">breno-dyordan-a872471a5</a></p>
+        <p><i class="fab fa-github icone-github"></i> <strong>GitHub:</strong> <a href="https://github.com/dyordan">github.com/dyordan</a></p>
+      </div>
+
+      <!-- Ficha: Objetivo -->
+      <div class="objetivo ficha">
+        <h3>Objetivo</h3>
+        <p>Estou em busca de transição para a área de Marketing, visando aplicar minha visão estratégica e criatividade em campanhas impactantes.</p>
+      </div>
+
+      <!-- Ficha: Experiência -->
+      <div class="experiencia ficha">
+        <h3>Experiência Profissional</h3>
+        <table class="experiencia-table">
+          <tr>
+            <th>Período</th>
+            <th>Cargo</th>
+            <th>Empresa</th>
+            <th>Descrição</th>
+          </tr>
+          <tr>
+            <td>11/2024 - Atual</td>
+            <td>Executivo de Contas</td>
+            <td>AiqFome</td>
+            <td>Gestão de clientes e identificação de oportunidades.</td>
+          </tr>
+          <tr>
+            <td>09/2023 - 11/2024</td>
+            <td>Representante de Vendas</td>
+            <td>Arcom</td>
+            <td>Prospecção de clientes e gestão de carteira ativa.</td>
+          </tr>
+          <tr>
+            <td>10/2018 - 03/2023</td>
+            <td>Líder de Pedágio</td>
+            <td>Entrevias</td>
+            <td>Supervisão de operações em praça de pedágio.</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Ficha: Formação Acadêmica -->
+      <div class="formacao ficha">
+        <h3>Formação Acadêmica</h3>
+        <ul>
+          <li><strong>Universidade Paulista (UNIP)</strong> – Marketing (início: 2025)</li>
+        </ul>
+      </div>
+
+      <!-- Ficha: Habilidades -->
+      <div class="habilidades ficha">
+        <h3>Habilidades</h3>
+        <ul>
+          <li>Boa Comunicação.</li>
+          <li>Proatividade.</li>
+          <li>Gestão de Equipes.</li>
+          <li>Disponibilidade para viagens.</li>
+          <li>Mobilidade para outras cidades.</li>
+        </ul>
+      </div>
+
+      <!-- Botão para Download -->
+      <div class="download ficha">
+        <a href="./curriculo.pdf" download class="btn-download">📎 Baixar Currículo em PDF</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Adiciona o script que insere o footer automaticamente -->
+  <script src="footer.js"></script>
+
+  <!-- Script para o efeito de digitação -->
+  <script>
+    // Animação do título
+    const title = document.getElementById('name');
+    const fullText = title.innerText;
+    let index = 0;
+
+    function typeEffect() {
+      if (index < fullText.length) {
+        title.innerText = fullText.substring(0, index + 1);
+        index++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    title.innerText = ""; // Limpa o texto inicial
+    typeEffect(); // Inicia o efeito de digitação
+  </script>
+
+</body>
+</html>

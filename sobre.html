@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre - Breno Dyordan</title>
+  <link rel="stylesheet" href="style.css"> <!-- Certifique-se de que o CSS global esteja sendo carregado corretamente -->
+  <style>
+    /* Garante que o rodapé fique no final da página */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Altura mínima da tela */
+      margin: 0; /* Remove margens indesejadas */
+      background-color: #F4F4F4; /* Cinza claro */
+      color: #121212; /* Preto elegante */
+      font-family: Arial, sans-serif; /* Fonte global */
+    }
+
+    main {
+      flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza o conteúdo horizontalmente */
+      justify-content: flex-start; /* Não centraliza verticalmente */
+    }
+
+    .ficha-sobre {
+      background-color: #FFFFFF; /* Fundo branco para destaque */
+      color: #121212; /* Preto elegante */
+      padding: 2rem;
+      margin: 2rem auto; /* Margem superior e inferior */
+      max-width: 900px; /* Largura máxima */
+      border-radius: 10px; /* Bordas arredondadas */
+      box-shadow: 0 4px 10px rgba(18, 18, 18, 0.1); /* Preto elegante com opacidade */
+      text-align: center; /* Centraliza o texto */
+    }
+
+    .ficha-sobre h2 {
+      text-decoration: underline; /* Adiciona sublinhado */
+      color: #1A374D; /* Azul petróleo */
+      font-weight: bold; /* Destaca o título */
+      margin-bottom: 1.5rem; /* Espaçamento entre título e texto */
+    }
+
+    .ficha-sobre p {
+      margin-bottom: 1rem; /* Espaçamento entre os parágrafos */
+      line-height: 1.8; /* Melhora legibilidade */
+      text-align: justify; /* Justifica o texto */
+    }
+
+    .btn {
+      background-color: #CDA434; /* Dourado suave */
+      color: #FFFFFF; /* Branco */
+      padding: 0.5rem 1rem;
+      border-radius: 5px; /* Bordas arredondadas */
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #121212; /* Preto elegante no hover */
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0; /* Reduz preenchimento vertical */
+      background-color: #1A374D; /* Azul petróleo */
+      color: #FFFFFF; /* Branco */
+      font-size: 0.9rem; /* Tamanho de fonte menor */
+      margin-top: auto; /* Faz o footer se posicionar sempre no final da página */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="navbar">
+    <h1 id="title">Breno Dyordan</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-label="Página Inicial">Início</a></li>
+        <li><a href="sobre.html" aria-label="Sobre Mim">Sobre</a></li>
+        <li><a href="projetos.html" aria-label="Meus Projetos">Projetos</a></li>
+        <li><a href="curriculo.html" aria-label="Meu Currículo">Currículo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="ficha-sobre">
+      <h2>Sobre Mim</h2>
+      <p>Desde jovem, percebi que o trabalho é muito mais do que uma obrigação – é uma forma de expressão. Minha jornada começou aos 14 anos como menor aprendiz, passando por diversas áreas até chegar onde estou hoje.</p>
+      <p>Sou atualmente <strong>Executivo de Contas na AiqFome</strong>, onde utilizo toda a experiência adquirida ao longo da minha trajetória para gerenciar clientes, identificar oportunidades e entregar resultados de impacto. Paralelamente, estou cursando <strong>Marketing</strong>, consolidando a teoria e prática em todas as minhas atividades.</p>
+      <p>Minha missão é conectar ideias com resultados concretos, sempre buscando evolução, criatividade e visão estratégica para alcançar objetivos grandiosos.</p>
+      <a href="curriculo.html" class="btn">Ver Currículo</a>
+    </section>
+  </main>
+
+  <!-- Adiciona o script que insere o footer automaticamente -->
+  <script src="footer.js"></script>
+
+  <!-- Script para efeito de digitação -->
+  <script>
+    const title = document.getElementById('title');
+    const fullText = title.innerText;
+    let index = 0;
+
+    function typeEffect() {
+      if (index < fullText.length) {
+        title.innerText = fullText.substring(0, index + 1);
+        index++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    title.innerText = "";
+    typeEffect();
+  </script>
+
+</body>
+</html>

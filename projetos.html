@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos - Breno Dyordan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* =============================== */
+    /* CONFIGURAÇÕES GERAIS           */
+    /* =============================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column; /* Configura layout em colunas */
+      min-height: 100vh; /* Garante altura mínima da página */
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #F4F4F4; /* Cinza claro */
+      color: #121212; /* Preto elegante */
+    }
+
+    main {
+      flex: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+    }
+
+    header.navbar {
+      background-color: #1A374D; /* Azul petróleo */
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    header nav a {
+      color: #FFFFFF; /* Branco */
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+
+    header nav a:hover {
+      background-color: rgba(244, 244, 244, 0.2); /* Transparência cinza claro */
+      color: #CDA434; /* Dourado suave */
+    }
+
+    /* Título Principal */
+    #title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffffff; /* Branco */
+    }
+
+    /* =============================== */
+    /* SEÇÃO "MEUS PROJETOS"           */
+    /* =============================== */
+    .ficha {
+      background-color: #FFFFFF; /* Branco */
+      color: #121212; /* Preto elegante */
+      padding: 2rem;
+      margin: 2rem auto; /* Espaçamento entre seções */
+      max-width: 900px; /* Limite de largura */
+      border-radius: 10px; /* Bordas arredondadas */
+      box-shadow: 0 4px 10px rgba(18, 18, 18, 0.1); /* Preto elegante com opacidade */
+      text-align: center; /* Centraliza o conteúdo */
+    }
+
+    .projetos-intro h2 {
+      color: #1A374D; /* Azul petróleo */
+      text-decoration: underline; /* Sublinhado */
+    }
+
+    .ficha p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #121212; /* Preto elegante */
+    }
+
+    /* Botão de Texto */
+    .btn-text {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #CDA434; /* Azul petróleo */
+      color: #ffffff; /* Branco */
+      font-weight: bold;
+      font-size: 1rem;
+      text-align: center;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-text:hover {
+      background-color: #121212; /* Dourado suave */
+      color: #CDA434; /* Branco */
+    }
+
+    /* Galeria */
+    .galeria {
+      display: none; /* Inicialmente escondido */
+      flex-direction: column; /* Exibe imagens em ordem vertical */
+      gap: 1.5rem; /* Espaçamento entre as imagens */
+      align-items: center;
+    }
+
+    .card img {
+      width: 100%; /* Ajusta imagens para ocupar toda a largura */
+      max-width: 900px; /* Limita ao tamanho da ficha */
+      height: auto; /* Mantém proporção */
+      border-radius: 5px; /* Bordas arredondadas */
+      box-shadow: 0 4px 10px rgba(18, 18, 18, 0.1); /* Preto elegante com opacidade */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card img:hover {
+      transform: scale(1.05); /* Ampliação suave ao passar o mouse */
+      box-shadow: 0 6px 15px rgba(18, 18, 18, 0.2); /* Sombra mais pronunciada */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="navbar">
+    <h1 id="title">Portfólio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-label="Página Inicial">Início</a></li>
+        <li><a href="sobre.html" aria-label="Sobre Mim">Sobre</a></li>
+        <li><a href="projetos.html" aria-label="Meus Projetos">Projetos</a></li>
+        <li><a href="curriculo.html" aria-label="Meu Currículo">Currículo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="projetos-intro ficha">
+      <h2>Meus Projetos</h2>
+      <p>Aqui você encontrará meus projetos, habilidades e experiências, destacando criatividade e visão estratégica para impactar marcas e consumidores.</p>
+    </section>
+
+    <div class="categorias">
+      <!-- Categoria 1 -->
+      <div class="categoria ficha">
+        <button class="btn-text" onclick="toggleGallery('galeria-acaiteria')">Açaíteria e Doceria Clara</button>
+        <p>Identidade visual e elementos visuais para doceria artesanal.</p>
+        <div class="galeria" id="galeria-acaiteria">
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_10.jpg" alt="Slide 10"></div>
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_1.png" alt="Slide 1"></div>
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_2.png" alt="Slide 2"></div>
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_3.png" alt="Slide 3"></div>
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_4.png" alt="Slide 4"></div>
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_5.png" alt="Slide 5"></div>
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_6.png" alt="Slide 6"></div>
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_7.png" alt="Slide 7"></div>
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_8.png" alt="Slide 8"></div>
+          <div class="card"><img src="projetos/acaiteria-doceria/images/projeto_clara_slide_9.png" alt="Slide 9"></div>
+        </div>
+      </div>
+
+      <!-- Categoria 2: Fluxograma Gramado Torcedor -->
+      <div class="categoria ficha">
+        <button class="btn-text" onclick="toggleGallery('galeria-fluxograma')">Fluxograma Gramado Torcedor</button>
+        <p>Projeto focado na criação de fluxogramas para orientar torcedores e organizar eventos no gramado.</p>
+        <div class="galeria" id="galeria-fluxograma">
+          <div class="card"><img src="projetos/fluxograma-torcedor/images/fluxograma_slide_1.png" alt="Slide 1"></div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Adiciona o script que insere o footer automaticamente -->
+  <script src="footer.js"></script>
+
+  <!-- Script para alternar exibição de galerias -->
+  <script>
+    function toggleGallery(galleryId) {
+      const gallery = document.getElementById(galleryId);
+      gallery.style.display = gallery.style.display === "block" ? "none" : "block";
+    }
+
+    // Animação do título
+    const title = document.getElementById('title');
+    const fullText = title.innerText;
+    let index = 0;
+
+    function typeEffect() {
+      if (index < fullText.length) {
+        title.innerText = fullText.substring(0, index + 1);
+        index++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    title.innerText = ""; // Limpa o texto inicial
+    typeEffect(); // Inicia o efeito de digitação
+  </script>
+
+</body>
+</html>

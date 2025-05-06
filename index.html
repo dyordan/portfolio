@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Início - Breno Dyordan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Ajuste para centralizar o texto */
+    .bem-vindo,
+    .ficha-sobre,
+    .projetos-destaques {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza o conteúdo horizontalmente */
+      justify-content: center; /* Centraliza o conteúdo verticalmente */
+      text-align: center; /* Centraliza o texto */
+    }
+
+    /* Adiciona espaçamento uniforme entre seções */
+    .bem-vindo {
+      margin-bottom: 2rem; /* Espaçamento inferior igual ao da seção Projetos */
+    }
+
+    /* Estilo atualizado para Projetos em Destaque */
+    .projetos-destaques {
+      background-color: #FFFFFF; /* Fundo branco igual ao Sobre Mim */
+      color: #121212; /* Preto elegante */
+      padding: 2rem; /* Espaçamento interno */
+      margin: 2rem auto; /* Centraliza horizontalmente com margens superior e inferior */
+      max-width: 900px; /* Define a mesma largura máxima do Sobre Mim */
+      border-radius: 10px; /* Bordas arredondadas */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+      text-align: center; /* Texto centralizado */
+    }
+
+    .projetos-destaques h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-decoration: underline;
+      color: #1A374D; /* Azul petróleo */
+    }
+
+    /* Galeria */
+    .galeria {
+      display: flex; /* Disposição horizontal dos itens */
+      flex-wrap: wrap; /* Permite quebra de linha caso o espaço seja insuficiente */
+      gap: 2rem; /* Espaçamento entre os cards */
+      justify-content: center; /* Centraliza os itens na galeria */
+    }
+
+    .card {
+      background-color: #FFFFFF; /* Branco */
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(18, 18, 18, 0.1); /* Preto elegante com opacidade */
+      text-align: center;
+      width: 280px; /* Largura fixa para uniformizar os cards */
+      height: auto; /* Permite ajuste dinâmico */
+    }
+
+    .card img {
+      width: 100%; /* Imagem ocupa toda a largura do card */
+      height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .descricao {
+      font-size: 1rem;
+      padding: 1rem;
+      color: #121212; /* Preto elegante */
+    }
+
+    .btn {
+      background-color: #CDA434; /* Dourado suave */
+      color: #FFFFFF; /* Branco */
+      padding: 0.5rem 1rem;
+      border-radius: 5px; /* Bordas arredondadas */
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 2rem; /* Espaçamento entre a galeria e o botão */
+    }
+
+    .btn:hover {
+      background-color: #121212; /* Preto elegante no hover */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="navbar">
+    <h1 id="title">Portfólio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" aria-label="Página Inicial">Início</a></li>
+        <li><a href="sobre.html" aria-label="Sobre Mim">Sobre</a></li>
+        <li><a href="projetos.html" aria-label="Meus Projetos">Projetos</a></li>
+        <li><a href="curriculo.html" aria-label="Meu Currículo">Currículo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+    <section class="bem-vindo ficha">
+      <h3>Bem-vindo ao meu site!</h3>
+      <p>Sou Breno Dyordan, Executivo de Contas, estudante de Marketing e freelancer. Aqui você poderá acompanhar meus projetos, habilidades e experiências que moldaram minha trajetória.</p>
+    </section>
+
+    <section class="ficha-sobre ficha">
+      <h3>Sobre Mim</h3>
+      <p>Desde jovem, percebi que o trabalho é mais que uma obrigação: é uma expressão. Trabalhei em diversas áreas e hoje me dedico a conectar ideias a resultados concretos como Executivo de Contas e estudante de Marketing.</p>
+      <a href="sobre.html" class="btn">Saiba mais</a>
+    </section>
+
+    <section class="projetos-destaques ficha">
+      <h3>Meus Projetos em Destaque</h3>
+      <div class="galeria">
+        <div class="card">
+          <img src="projetos/acaiteria-doceria/images/projeto_clara_slide_10.jpg" alt="Açaíteria e Doceria Clara">
+          <p class="descricao">Identidade visual criada para Açaíteria e Doceria Clara.</p>
+        </div>
+        <div class="card">
+          <img src="projetos/fluxograma-torcedor/images/fluxograma_slide_1.png" alt="Fluxograma Gramado Torcedor">
+          <p class="descricao">Fluxograma criado para orientar torcedores e organizar eventos no gramado.</p>
+        </div>
+      </div>
+      <a href="projetos.html" class="btn">Ver todos os projetos</a>
+    </section>
+  </main>
+
+  <!-- Adiciona o script que insere o footer automaticamente -->
+  <script src="footer.js"></script>
+
+  <!-- Script para efeito de digitação -->
+  <script>
+    const title = document.getElementById('title');
+    const fullText = title.innerText;
+    let index = 0;
+
+    function typeEffect() {
+      if (index < fullText.length) {
+        title.innerText = fullText.substring(0, index + 1);
+        index++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    title.innerText = "";
+    typeEffect();
+  </script>
+
+</body>
+</html>
