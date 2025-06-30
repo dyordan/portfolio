@@ -1,0 +1,562 @@
+/* ===================== 🔧 LAYOUT BASE ===================== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ===================== 🎨 PALETA DE CORES ===================== */
+:root {
+  /* Tons principais */
+  --cor-primaria: #1A374D;
+  --cor-secundaria: #06283D;
+  --cor-destaque: #CDA434;
+
+  /* Texto */
+  --cor-texto: #1A374D;
+  --cor-texto-claro: #fffcfc;
+  --cor-whatsapp: #1A374D;
+  --cor-email: #1A374D;
+  --cor-localizacao: #1A374D;
+  --cor-linkedin: #1A374D;
+  --cor-github: #1A374D;
+
+  /* Neutros */
+  --cor-branca: #ffffff;
+  --cor-preta: #000000;
+  --cor-cinza: #ccc;
+
+  /* Ação */
+  --cor-hover: #121212;
+
+  /* Sombras */
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* ===================== 📱 SEÇÃO: Responsividade (mobile first) ===================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .text_body {
+    font-size: 1.4rem;
+  }
+
+  .welcome_card,
+  .sheet_about,
+  .featured_projects_file {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .gallery {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .gallery.visible {
+    max-height: 2000px;
+    opacity: 1;
+  }
+
+  .card {
+    width: 90%;
+    main-height:auto;
+  }
+}
+
+
+/* ===================== 🨭 CABEÇALHO ===================== */
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: var(--cor-destaque);
+}
+
+/* ===================== 🧩 SEÇÕES PRINCIPAIS ===================== */
+.text_sub_title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--cor-secundaria);
+  margin-bottom: 1.2rem;
+}
+
+.welcome_card,
+.sheet_about,
+.featured_projects_file,
+.intro_projects_file,
+.file_category_1,
+.file_category_2 {
+  background-color: var(--cor-branca);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--cor-preta);
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.welcome_card p,
+.sheet_about p,
+.featured_projects_file p,
+.intro_projects_file p,
+.file_category_1 p,
+.file_category_2 p {
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+
+.featured_projects_file .description a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.featured_projects_file .description a:hover {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+}
+
+/* ===================== 👤 SOBRE - ÍCONES DE HABILIDADES ===================== */
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--cor-primaria);
+  transition: color 0.3s ease;
+}
+
+.icon-box img {
+  width: 52px;
+  height: 52px;
+  padding: 0.5rem;
+  background-color: var(--cor-branca);
+  border-radius: 50%;
+  box-shadow: 0 4px 8px var(--sombra);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-box img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px var(--sombra);
+}
+
+.icon-box span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  text-align: center;
+}
+
+
+/* ===================== 💾 CURRÍCULO - ESTILO ESPECÍFICO ===================== */
+.curriculum {
+  background-color: var(--cor-branca);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--sombra);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.text_sub_title_curriculum {
+  font-size: 1.6rem !important;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  margin-bottom: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--cor-cinza);
+  padding-bottom: 0.3rem;
+}
+
+.objective,
+.experice,
+.training_form {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.curriculum p,
+.curriculum li {
+  font-size: 1.1rem;
+  color: var(--cor-texto);
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.experience_sheet {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.3rem;
+  font-size: 0.95rem;
+}
+
+.experience_sheet th,
+.experience_sheet td {
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.experience_sheet th {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  font-weight: bold;
+}
+
+.curriculum ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.curriculum li {
+  list-style-type: disc;
+}
+
+.curriculum a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+.curriculum a:hover {
+  color: var(--cor-destaque);
+}
+
+.resume_download {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.resume_download .btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.resume_download .btn:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-preta);
+}
+
+.curriculum i {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+/* ===================== 💬 ÍCONES PERSONALIZADOS ===================== */
+.curriculum .icone-whatsapp {
+  color: var(--cor-whatsapp);
+}
+
+.curriculum .icone-email {
+  color: var(--cor-email);
+}
+
+.curriculum .icone-localizacao {
+  color: var(--cor-localizacao);
+}
+
+.curriculum .icone-linkedin {
+  color: var(--cor-linkedin);
+}
+
+.curriculum .icone-github {
+  color: var(--cor-github);
+}
+
+.curriculum i:hover {
+  color: var(--cor-destaque);
+  transition: color 0.3s ease;
+}
+
+
+/* ===================== 🎯 BOTÃO ===================== */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branca);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-preta);
+}
+
+/* ===================== 🎨 GALERIA DA HOME ===================== */
+.featured_projects_file .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  opacity: 1;
+  max-height: none;
+  overflow: visible;
+  transition: none;
+}
+
+.featured_projects_file .card {
+  background-color: var(--cor-branca);
+  width: 280px;
+  min-height: 370px;
+  max-height: 370px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--cor-cinza);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.featured_projects_file .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.featured_projects_file .card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--cor-cinza);
+  border-radius: 8px 8px 0 0;
+}
+
+.featured_projects_file .description {
+  height: 100px;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--cor-texto);
+  background-color: var(--cor-branca);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.featured_projects_file .description a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+/* ===================== 🗄️ GALERIA E CARDS ===================== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1.2s ease, opacity 1.2s ease;
+}
+
+.card {
+  background-color: var(--cor-branca);
+  width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--sombra);
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--cor-texto-claro);
+}
+
+/* ===================== 🔗 LINKS DOS CARDS/PROJETOS EM DESTAQUE ===================== */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link .card {
+  cursor: pointer;
+}
+
+
+/* ===================== 🎮 ANIMAÇÕES ===================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== ✍️ EFEITO DE DIGITAÇÃO ===================== */
+.typing::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ===================== footer ===================== */
+
+.main-footer {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-branca);
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-top: 2px solid var(--cor-primaria);
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: var(--cor-branca);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.8rem;
+  gap: 0.3rem;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icons a:hover img {
+  filter: brightness(0) invert(70%) sepia(80%) saturate(300%) hue-rotate(5deg);
+  transform: scale(1.1);
+}
+
+.copyright {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+  <header>
+    <h1 id="typed-title"></h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="about.html">Sobre</a>
+      <a href="projects.html">Projetos</a>
+      <a href="curriculum.html">Currículo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro_projects_file">
+      <h2 class="text_sub_title">Meus Projetos</h2>
+      <p>
+        Aqui você encontrará meus projetos, habilidades e experiências,
+        destacando criatividade e visão estratégica para impactar marcas e
+        consumidores.
+      </p>
+    </section>
+
+    <div class="file_category">
+      <!-- Categoria 1 -->
+      <div class="file_category_1">
+        <button class="btn" onclick="toggleGallery('galeria-acaiteria')">
+          Açaíteria e Doceria Clara
+        </button>
+        <p>Identidade visual e elementos visuais para doceria artesanal.</p>
+        <div class="gallery" id="galeria-acaiteria">
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_1.jpg" alt="Slide 1" />
+          </div>
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_2.png" alt="Slide 2" />
+          </div>
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_3.png" alt="Slide 3" />
+          </div>
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_4.png" alt="Slide 4" />
+          </div>
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_5.png" alt="Slide 5" />
+          </div>
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_6.png" alt="Slide 6" />
+          </div>
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_7.png" alt="Slide 7" />
+          </div>
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_8.png" alt="Slide 8" />
+          </div>
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_9.png" alt="Slide 9" />
+          </div>
+          <div class="card">
+            <img src="/assets/acaiteria_doceria/projeto_clara_slide_10.jpg" alt="Slide 10" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoria 2 -->
+      <div class="file_category_2">
+        <button class="btn" onclick="toggleGallery('galeria-fluxograma')">
+          Fluxograma Gramado Torcedor
+        </button>
+        <p>
+          Projeto focado na criação de fluxogramas para orientar torcedores e
+          organizar eventos no gramado.
+        </p>
+        <div class="gallery" id="galeria-fluxograma">
+          <div class="card">
+            <img src="assets/fluxograma_torcedor/fluxograma_slide_1.png" alt="Slide 1" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/components/footer.js"></script>
+  <script src="assets/components/typingEffect.js"></script>
+  <script src="assets/components/toogleGallery.js"></script>
+
+</body>
+
+</html>
